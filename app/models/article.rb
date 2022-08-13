@@ -7,4 +7,8 @@ class Article < ApplicationRecord
 
     validates :title, presence: true
     validates :body, presence: true, length: {minimum: 10}
+
+    def normalize_friendly_id(string)
+        string
+    end
 end
